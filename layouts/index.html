@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{ .Title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/perso.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="img/avatar.jpg" alt="" /></span>
+							<h1 id="title">{{ .Site.Params.menu_title }}</h1>
+							<p>{{ .Site.Params.menu_description }}</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="#subscribe" id="subscribe-link" class="skel-layers-ignoreHref"><span class="icon fa-th">subscribe</span></a></li>
+								<li><a href="#description" id="description-link" class="skel-layers-ignoreHref"><span class="icon fa-th">description</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">about</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+              {{ range .Site.Params.social }}
+              <li><a href="{{ .link }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+              {{ end }}
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">
+                                    {{ safeHTML .Site.Params.header_title }}
+								</h2>
+								<p>{{ safeHTML .Site.Params.header_subtitle }}</p>
+							</header>
+
+							<footer>
+								<a href="#subscribe" class="button scrolly">{{ safeHTML .Site.Params.header_button }}</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- subscribe -->
+					<section id="subscribe" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Subscribe</h2>
+							</header>
+
+
+                            To know more on our great idea :
+
+                            <form method="post" name="{{ .Site.Params.form_prefix }}-newsletter" data-netlify="true">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<input type="submit" value="Receive our news" />
+									</div>
+								</div>
+							</form>
+
+
+						</div>
+					</section>
+
+
+
+				<!-- description -->
+					<section id="description" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Description</h2>
+							</header>
+
+
+                            You will love it !
+
+						</div>
+					</section>
+
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About</h2>
+							</header>
+
+                            <center><a href="#" class="image featured"><img src="img/about.jpg" alt="" class="img-responsive center-block"/></a></center>
+
+We are wonderful !
+
+
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+
+                            <form method="post" name="{{ .Site.Params.form_prefix }}-contact" data-netlify="true">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+                {{ .Site.Params.footer }}
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>Powered by <a href="https://gohugo.io/">Hugo</a> + <a href="http://html5up.net">HTML5 UP</a> </li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/jquery.scrolly.min.js"></script>
+			<script src="/js/jquery.scrollzer.min.js"></script>
+			<script src="/js/skel.min.js"></script>
+			<script src="/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/js/main.js"></script>
+
+	</body>
+</html>

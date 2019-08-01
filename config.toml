@@ -1,0 +1,17 @@
+title = "SITE TITLE"
+theme = "prologue"
+sectionPagesMenu = "main"
+baseURL = "/"
+languageCode = "fr"
+newContentEditor = "vim"
+
+[params]
+  menu_title = "MENU TITLE"
+  menu_description = "MENU DESCRPTION"
+  footer = "SITE FOOTER"
+
+  header_title = "HEADER TITLE"
+  header_subtitle = "HEADER SUBTITLE"
+  header_button = "HEADER BUTTON"
+
+  form_prefix = "template"

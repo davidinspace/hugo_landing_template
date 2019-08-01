@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{ .Title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/perso.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="img/avatar.jpg" alt="" /></span>
+							<h1 id="title">{{ .Site.Params.subtitle }}</h1>
+							<p>{{ .Site.Params.description }}</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="#present" id="present-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Present</span></a></li>
+								<li><a href="#experience" id="experience-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Experience</span></a></li>
+								<li><a href="#love" id="love-link" class="skel-layers-ignoreHref"><span class="icon fa-th"><3</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Hi !</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+              {{ range .Site.Params.social }}
+              <li><a href="{{ .link }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+              {{ end }}
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">
+                                    {{ safeHTML .Site.Params.header_title }}
+								</h2>
+								<p>{{ safeHTML .Site.Params.header_subtitle }}</p>
+							</header>
+
+							<footer>
+								<a href="#present" class="button scrolly">{{ safeHTML .Site.Params.header_button }}</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Present -->
+					<section id="present" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Present</h2>
+							</header>
+            <p id='description'>
+            <a href='https://github.com/pledgcorporate/ecard-plugin-doc/blob/master/README.md' target='_blank'>Building</a> (hopefully!) the present future of
+            <strong>instant payments :</strong :>
+            <br>
+            <br>Using virtual cards, API and micro-framework to generate <strong>shared, multiple and delayed payments</strong> that merchants can integrate with only a piece of javascript :
+            <br><a href='https://pledgcorporate.github.io/ecard-plugin-doc/#/plugin/README' target='_blank'>ReadMe</a>
+            </p>
+
+						</div>
+					</section>
+
+
+
+				<!-- Experience -->
+					<section id="experience" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Experience</h2>
+							</header>
+            <p id='description'>
+            Lead dev in fintech startups.
+            <br>Real-Time Bidding and API.
+            <br>Founder at the incubator <a target='_blank' href='https://www.frenchweb.fr/startups-dojoboost-un-nouvel-accelerateur-pour-les-entrepreneurs-60267/45604'>DojoBoost</a>.
+
+						</div>
+					</section>
+
+				<!-- Love -->
+					<section id="love" class="two">
+						<div class="container">
+
+							<header>
+								<h2><3</h2>
+							</header>
+            <p id='description'>
+
+            Clean code, Test Driven Development,
+            <br> <a target='_blank' href='https://www.youtube.com/watch?v=p9phhkjVn7M'>kinesis<a>, <a href='https://stackoverflow.blog/wp-content/uploads/2017/05/practicaldev-1-229x300.jpg' target='_blank'>vim</a>, <a target='_blank' href='https://opensource.com/article/18/8/i3-tiling-window-manager'>i3wm</a>, <a target='_blank' href='https://www.youtube.com/watch?v=g2RtjO_jXvY'>qutebrowser</a>, <a target='_blank' href='https://opensource.com/business/15/2/how-linux-philosophy-affects-you'>linux</a>, <a target='_blank' href='https://www.youtube.com/watch?v=aBr2kKAHN6M'>spaceman</a>...
+            </p>
+
+
+
+            <h3>Craftsman</h3>
+            <p><font id='quote'>
+                Professionals use their powers for good and write code that others can understand.</font>
+            <br><font id='author'>
+                Robert C. Martin, Clean Code</font>
+            </p>
+
+              <div class="row">
+                <div class="4u 12u$(mobile)">
+                  {{ range .Site.Params.portfolio1 }}
+                  <article class="item">
+                    <a href="{{ .url }}" class="image fit"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+                    <header>
+                      <h3>{{ .title }}</h3>
+                    </header>
+                  </article>
+                  {{ end }}
+                </div>
+
+                <div class="4u 12u$(mobile)">
+                  {{ range .Site.Params.portfolio2 }}
+                  <article class="item">
+                    <a href="{{ .url }}" class="image fit"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+                    <header>
+                      <h3>{{ .title }}</h3>
+                    </header>
+                  </article>
+                  {{ end }}
+                </div>
+
+                <div class="4u 12u$(mobile)">
+                  {{ range .Site.Params.portfolio3 }}
+                  <article class="item">
+                    <a href="{{ .url }}" class="image fit"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+                    <header>
+                      <h3>{{ .title }}</h3>
+                    </header>
+                  </article>
+                  {{ end }}
+                </div>
+              </div>
+
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Hi !</h2>
+							</header>
+
+                            <center><a href="#" class="image featured"><img src="img/about.jpg" alt="" class="img-responsive center-block"/></a></center>
+
+
+
+
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>
+
+            <a target='_blank' href="https://github.com/davidinspace">Github</a>
+            | <a target='blank' href="https://www.linkedin.com/in/davidtysman">Linkedin</a>
+             <br>
+            <span class="e-mail" data-user="rekam" data-website="oi.divadolleh"></span>
+            </font>
+            <br><font id='description'>France (Paris), remote</font>
+            </p>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+                        <font id='quote'> The future is already here - it's just not very evenly distributed.</font>
+            <font id='author'><a target='_blank' href='https://www.goodreads.com/author/show/9226.William_Gibson'>William Gibson</a>, 1993</font>
+					<ul class="copyright">
+						<li>Powered by <a href="https://gohugo.io/">Hugo</a> + <a href="http://html5up.net">HTML5 UP</a> </li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/jquery.scrolly.min.js"></script>
+			<script src="/js/jquery.scrollzer.min.js"></script>
+			<script src="/js/skel.min.js"></script>
+			<script src="/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/js/main.js"></script>
+
+	</body>
+</html>
